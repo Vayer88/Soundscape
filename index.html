@@ -4,18 +4,32 @@
     <title>Scroll Unblur</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <button id="sound-button" class="sound-button" onclick="toggleSound()">
-        <img src="play.png" alt="Play" class="sound-icon-play" id="sound-icon-play" style="display: none;">
-        <img src="mute.png" alt="Mute" class="sound-icon-mute" id="sound-icon-mute">
+        <img src="volume_play.png" alt="Play" class="sound-icon-play" id="sound-icon-play" style="display: none;">
+        <img src="volume_mute.png" alt="Mute" class="sound-icon-mute" id="sound-icon-mute">
     </button>
     <div id="image-container">
         <img src="SoundP1.jpg" alt="Unblur Image">
     </div>
+    <div class="block-right" data-aos="fade-up-left" data-aos-easing="linear" data-aos-duration="1000" style="margin-top: 1500px;">
+        <p>Where am I?</p>
+    </div>
+    <div class="block-left" data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="1000" style="margin-top: 3000px;">
+        <p>I smell something…</p>
+    </div>
     <div class="next-container">
         <a class = "link" href="1index.html">
-            <button class="next"><span>Buzz</span></button>
+            <button class="next"><span>follow the smell</span></button>
         </a>
     </div>
     <script src="script.js"></script>

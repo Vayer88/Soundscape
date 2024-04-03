@@ -1,4 +1,5 @@
 const audio = new Audio("Scene1.mp3");
+const buzz = new Audio("buzzcut.mp3");
 audio.loop = true;
 audio.volume = 0.1;
 
@@ -30,30 +31,6 @@ window.addEventListener('scroll', function() {
     image.style.filter = 'blur(' + blurValue + 'px)';
     audio.volume = audioVolume; //0.1 + audioVolume
 });
+  
 
-function changePage(direction) {
-    const basePath = "/Sound_Project/";
-    let currentPage = window.location.pathname.replace(basePath, "");
-  
-    if (currentPage === "") {
-      // If on the base page
-      if (direction === 1) {
-        // Go to the first comic page
-        window.location.href = basePath + "1";
-      }
-      // No action for direction -1 since there's no page before the base page
-    } else {
-      // On a numbered comic page
-      let currentPageNumber = parseInt(currentPage, 10); // Convert the path to a number
-      let newPageNumber = currentPageNumber + direction;
-  
-      if (newPageNumber === 0) {
-        // Go back to the base page
-        window.location.href = basePath;
-      } else {
-        // Go to the next or previous numbered page
-        window.location.href = basePath + newPageNumber;
-      }
-    }
-  }
-  
+  AOS.init();
